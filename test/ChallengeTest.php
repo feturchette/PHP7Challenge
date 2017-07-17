@@ -18,20 +18,24 @@ class ChallengeTest extends \PhpUnit_Framework_TestCase {
         $this->object->addRule(new MultipleOf5);
     }
 
-    function testRenderNumber() {
-        $this->assertEquals(4, $this->object->validateRules(4));
+    function testValidateNumber4() {
+        $this->assertEquals('4', $this->object->validateNumber(4));
     }
 
-    function testRenderLinio() {
-        $this->assertEquals('Linio', $this->object->validateRules(3));
+    function testValidateNumberLinio() {
+        $this->assertEquals('Linio', $this->object->validateNumber(3));
     }
 
-    function testRenderIT() {
-        $this->assertEquals('IT', $this->object->validateRules(5));
+    function testValidateNumberIT() {
+        $this->assertEquals('IT', $this->object->validateNumber(5));
     }
 
-    function testRenderLinianos() {
-        $this->assertEquals('Linianos', $this->object->validateRules(15));
+    function testValidateNumberLinianos() {
+        $this->assertEquals('Linianos', $this->object->validateNumber(15));
+    }
+    
+    function testValidateArray4LinioITLinianos(){
+        $this->assertEquals(array('4','Linio','IT','Linianos'), $this->object->validateArray(array(4,3,5,15)));
     }
 
 }

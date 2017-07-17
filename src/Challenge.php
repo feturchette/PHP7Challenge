@@ -12,13 +12,23 @@ class Challenge {
         $this->rules[] = $rule;
     }
 
-    public function validateRules(int $number): string {
+    public function validateNumber(int $number): string {
         foreach ($this->rules as $rule) {
             if ($rule->validate($number)) {
                 return $rule->render();
             }
         }
         return strval($number);
+    }
+
+    public function validateArray(array $array): array {
+        $result = array_map(function ($number) {
+
+            return $this->validateNumber($number);
+            
+        }, $array);
+        
+        return $result;
     }
 
 }
