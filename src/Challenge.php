@@ -23,11 +23,9 @@ class Challenge {
 
     public function validateArray(array $array): array {
         $result = array_map(function ($number) {
-
             return $this->validateNumber($number);
-            
         }, $array);
-        
+
         return $result;
     }
 

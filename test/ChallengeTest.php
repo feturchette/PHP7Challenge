@@ -33,9 +33,9 @@ class ChallengeTest extends \PhpUnit_Framework_TestCase {
     function testValidateNumberLinianos() {
         $this->assertEquals('Linianos', $this->object->validateNumber(15));
     }
-    
-    function testValidateArray4LinioITLinianos(){
-        $this->assertEquals(array('4','Linio','IT','Linianos'), $this->object->validateArray(array(4,3,5,15)));
+
+    function testValidateArray4LinioITLinianos() {
+        $this->assertEquals(array('4', 'Linio', 'IT', 'Linianos'), $this->object->validateArray(array(4, 3, 5, 15)));
     }
 
 }

@@ -11,5 +11,5 @@ class MultipleOf3 implements MultipleInterface {
     public function render(): string {
         return 'Linio';
     }
-    
+
 }
