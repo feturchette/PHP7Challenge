@@ -13,11 +13,11 @@ class MultipleOf3And5Test extends \PhpUnit_Framework_TestCase {
     }
 
     function testValidateTrue() {
-        $this->assertEquals(true, $this->object->validate(15));
+        $this->assertTrue($this->object->validate(15));
     }
 
     function testValidateFalse() {
-        $this->assertEquals(false, $this->object->validate(4));
+        $this->assertFalse($this->object->validate(4));
     }
 
     function testRender() {

@@ -18,7 +18,7 @@ class Challenge {
                 return $rule->render();
             }
         }
-        
+
         return strval($number);
     }
 
